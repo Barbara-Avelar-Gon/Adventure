@@ -1,0 +1,14 @@
+sources:
+  - name: adventureworks
+    description: 'Essa é a fonte do sistema ERP da Adventure Works com dados de vendas e transações.'
+    database: FEA24_9
+    schema: RAW_ADVENTURE_WORKS
+    tables:
+      - name: ADDRESS
+        description: 'Tabela com dados de endereços dos clientes.'
+        columns:
+          - name: ADDRESSID
+            description: 'Chave primária da tabela de endereços.'
+            tests:
+              - unique
+              - not_null
