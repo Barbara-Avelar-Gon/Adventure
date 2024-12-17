@@ -12,3 +12,11 @@ sources:
             tests:
               - unique
               - not_null
+              
+      - name: PRODUCT
+
+      - name: ProductSubcategory
+
+      - name: ProductCategory
+
+      - name: ProductModel
