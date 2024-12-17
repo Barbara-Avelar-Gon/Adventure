@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: dim_produtos
+    description: >
+      Tabela dimensão dos produtos da adventure Works
+    columns:
+      - name: PK_PRODUTO
+        description: Chave primária da dimensão de produtos.
+        tests:
+          - unique
+          - not_null
+
+      - name: FK_PRODUTO_SUBCAT
+        description: Chave da tabela subcategoria.
+
+      - name: FK_PRODUTO_MODELO
+        description: Chave da tabela modelo.
+              
+      - name: NM_PRODUTO
+        description: Nome do produto.
+        tests:
+          - not_null
+      
+      - name: COR_PRODUTO
+        description: Cor do produto.
+        
+      - name: NM_PRODUTO_CAT
+        description: Nome da categoria do produto.
+
+      - name: NM_PRODUTO_SUBCAT
+        description: Nome da subcategoria do produto.
+
+      - name: NM_PRODUTO_MOD
+        description: Nome do modelo do produto.
