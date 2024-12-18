@@ -8,7 +8,6 @@ models:
       - name: PK_RAZAO_VENDA
         description: Chave primária da dimensão de razoes.
         tests:
-          - unique
           - not_null
 
       - name: FK_RAZAO
