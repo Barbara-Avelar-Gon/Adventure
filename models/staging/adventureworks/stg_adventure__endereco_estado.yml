@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_adventure__endereco_estado
+    description: Tabela de preparação dos dados de enderço.
+    columns:
+      - name: pk_estado
+        description: Chave primária da tabela.
+
+      - name: fk_pais
+        description: Chave estrangeira para junção com informação de país.
+        
+      - name: nm_estado
+        description: Nome do estado.

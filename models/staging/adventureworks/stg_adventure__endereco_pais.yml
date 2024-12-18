@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__endereco_pais
+    description: Tabela de preparação dos dados de endereço.
+    columns:
+      - name: pk_pais
+        description: Chave primária da tabela.
+        
+      - name: nm_pais
+        description: Nome do país.

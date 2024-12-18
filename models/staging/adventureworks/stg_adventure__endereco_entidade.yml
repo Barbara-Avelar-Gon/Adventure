@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_adventure__endereco_entidade
+    description: Tabela de preparação dos dados de enderço.
+    columns:
+      - name: pk_entidade
+        description: Chave primária da tabela.
+
+      - name: fk_endereco
+        description: Chave estrangeira para junção com informação de endereço.
+        
+      - name: pk_tipo_endereco
+        description: Chave estrangeira para junção com informação de tipo de endereço.
