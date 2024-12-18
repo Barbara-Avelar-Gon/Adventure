@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_cartao
+    description: Tabela de intermediário com dados de cartao usado na compra.
+    columns:
+      - name: pk_cartao
+        description: .
+        data_tests:
+          - not_null
