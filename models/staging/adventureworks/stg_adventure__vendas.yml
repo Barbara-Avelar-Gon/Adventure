@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__vendas
+    description: Tabela de preparação dos dados brutos de vendas.
+    columns:
+      - name: pk_venda
+        description: Chave primária da tabela de vendas.
+        data_tests:
+          - unique
+          - not_null  

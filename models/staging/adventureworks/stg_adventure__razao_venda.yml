@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__razao_venda
+    description: Tabela de preparação dos dados de razao de vendas da Adventure Works
+    columns:
+      - name: pk_razao_venda
+        description: Chave primária da tabela.
+        
+      - name: fk_razao
+        description: Chave estrangeira para junção com a tabela de descrição de razão.

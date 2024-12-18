@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_cartao
+    description: >
+      Tabela dimensão dos cartoes usados nas compras da adventure Works
+    columns:
+      - name: PK_cartao
+        description: Chave primária da dimensão de cartoes.
+        tests:
+          - not_null
+
+      - name: tipo_cartao
+        description: Descrição do tipo de cartão utilizado.

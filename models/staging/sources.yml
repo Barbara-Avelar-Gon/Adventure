@@ -12,3 +12,22 @@ sources:
             tests:
               - unique
               - not_null
+              
+      - name: PRODUCT
+
+      - name: ProductSubcategory
+
+      - name: ProductCategory
+
+      - name: ProductModel
+
+      - name: SalesOrderHeaderSalesReason
+
+      - name: SalesReason
+
+      - name: CreditCard
+
+      - name: SalesOrderHeader
+       
+      - name: SalesOrderDetail
+

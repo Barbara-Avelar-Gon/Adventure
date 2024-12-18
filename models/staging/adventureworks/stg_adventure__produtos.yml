@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_adventure__produtos
+    description: Tabela de preparação dos dados de produtos disponíveis na Adventure Works
+    columns:
+      - name: pk_produto
+        description: Chave primária da tabela.
+        
+      - name: nm_produto
+        description: Nome do produto.
+
+      - name: cor_produto
+        description: Cor do produto cadastrado.
+        
+      - name: fk_produto_subcat
+        description: Chave estrangeira de subcategoria do produto.
+
+      - name: fk_produto_modelo
+        description: Chave estrangeira de submodelo do produto.

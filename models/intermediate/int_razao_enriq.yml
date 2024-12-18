@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_razao_enriq
+    description: Tabela de intermediário para enriquecer os dados da dimensão razao de venda.
+    columns:
+      - name: PK_RAZAO_VENDA
+        description: .
+        data_tests:
+          - not_null

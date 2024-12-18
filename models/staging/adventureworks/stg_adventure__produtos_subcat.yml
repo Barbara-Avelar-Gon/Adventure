@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_adventure__produtos_subcat
+    description: Tabela de preparação dos dados de subcategoria de produtos disponíveis na Adventure Works
+    columns:
+      - name: fk_produto_subcat
+        description: Chave primária da tabela.
+
+      - name: fk_produto_cat
+        description: Chave para junção com a tabela de categoria de produtos.
+        
+      - name: nm_produto_subcat
+        description: Nome da subcategoria do produto.
