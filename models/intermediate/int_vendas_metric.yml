@@ -7,4 +7,5 @@ models:
       - name: PK_VENDA_DETALHE
         description: .
         data_tests:
+          - unique
           - not_null
