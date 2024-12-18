@@ -10,7 +10,7 @@ with
     )
 
     
-    , razoes_enriq as (
+    , razao_enriq as (
         select
         razao_venda.PK_RAZAO_VENDA
         , razao_venda.FK_RAZAO

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_razao
+    description: >
+      Tabela dimensão das razoes de vendas da adventure Works
+    columns:
+      - name: PK_RAZAO_VENDA
+        description: Chave primária da dimensão de razoes.
+        tests:
+          - unique
+          - not_null
+
+      - name: FK_RAZAO
+        description: Chave da tabela razao descritiva.
+
+      - name: FK_PRODUTO_MODELO
+        description: Chave da tabela modelo.
+              
+      - name: NM_RAZAO
+        description: Nome da razao.
+        tests:
+          - not_null
+      
+      - name: TIPO_RAZAO
+        description: tipo de razao.
