@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__produtos_modelo
+    description: Tabela de preparação dos dados de modelo de produtos disponíveis na Adventure Works
+    columns:
+      - name: fk_produto_modelo
+        description: Chave primária da tabela.
+        
+      - name: nm_produto_mod
+        description: Nome do modelo do produto.

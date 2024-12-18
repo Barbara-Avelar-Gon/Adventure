@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__cartao
+    description: Tabela de preparação dos dados de cartão usado nas vendas.
+    columns:
+      - name: pk_cartao
+        description: Chave primária da tabela.
+        
+      - name: tipo_cartao
+        description: Descrição do tipo de cartão.

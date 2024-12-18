@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_vendas_metric
+    description: Tabela de intermediário para construção de métricas com os dados da fato vendas.
+    columns:
+      - name: PK_VENDA_DETALHE
+        description: .
+        data_tests:
+          - not_null

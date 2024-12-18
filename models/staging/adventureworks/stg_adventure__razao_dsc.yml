@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_adventure__razao_dsc
+    description: Tabela de preparação dos dados de razao de vendas da Adventure Works
+    columns:
+      - name: fk_razao
+        description: Chave primária da tabela.
+        
+      - name: nm_razao
+        description: Descrição da razão de venda.
+
+      - name: tipo_razao
+        description: Descrição do tipo da razão de venda.

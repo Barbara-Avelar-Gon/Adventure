@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__produtos_categ
+    description: Tabela de preparação dos dados de categorias de produtos disponíveis na Adventure Works
+    columns:
+      - name: fk_produto_cat
+        description: Chave primária da tabela.
+        
+      - name: nm_produto_cat
+        description: Nome da categoria do produto.
