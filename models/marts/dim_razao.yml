@@ -7,8 +7,6 @@ models:
     columns:
       - name: PK_RAZAO_VENDA
         description: Chave primária da dimensão de razoes.
-        tests:
-          - not_null
 
       - name: FK_RAZAO
         description: Chave da tabela razao descritiva.

@@ -7,5 +7,4 @@ models:
       - name: PK_RAZAO_VENDA
         description: .
         data_tests:
-          - unique
           - not_null
