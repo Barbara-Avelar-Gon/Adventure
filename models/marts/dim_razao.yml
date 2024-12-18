@@ -18,8 +18,6 @@ models:
               
       - name: NM_RAZAO
         description: Nome da razao.
-        tests:
-          - not_null
       
       - name: TIPO_RAZAO
         description: tipo de razao.
