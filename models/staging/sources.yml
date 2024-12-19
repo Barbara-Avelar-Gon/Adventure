@@ -4,7 +4,7 @@ sources:
     database: FEA24_9
     schema: RAW_ADVENTURE_WORKS
     tables:
-      - name: ADDRESS
+      - name: Address
         description: 'Tabela com dados de endereços dos clientes.'
         columns:
           - name: ADDRESSID
@@ -30,4 +30,20 @@ sources:
       - name: SalesOrderHeader
        
       - name: SalesOrderDetail
+
+      - name: Person
+
+      - name: Customer
+
+      - name: BusinessEntity
+
+      - name: BusinessEntityAddress
+
+      - name: StateProvince
+
+      - name: CountryRegion
+
+      - name: AddressType 
+
+      - name: SalesTerritory
 

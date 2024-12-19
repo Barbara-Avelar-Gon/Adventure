@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__endereco_tipo
+    description: Tabela de preparação dos dados de endereço.
+    columns:
+      - name: pk_tipo_endereco
+        description: Chave primária da tabela.
+        
+      - name: tipo_endereco
+        description: Tipo de endereco.

@@ -18,6 +18,7 @@ with
         , vendas.FK_CUSTOMER
         , vendas.FK_CARTAO
         , vendas.FK_CONVERSAO
+        , vendas.fk_territorio
         , vendas.DT_VENDA
         , vendas.DT_ENTREGA_PREVISTA
         , vendas.DT_ENVIO
@@ -39,7 +40,7 @@ with
     select
         *
         , QTD_VENDA * VALOR_UNITARIO_VENDA as VALOR_BRUTO
-        , (QTD_VENDA * (VALOR_UNITARIO_VENDA- VALOR_DESCONTO_UNIT_VENDA)) as VALOR_LIQ
+        , (QTD_VENDA * (VALOR_UNITARIO_VENDA * (1- VALOR_DESCONTO_UNIT_VENDA))) as VALOR_LIQ
         , FRETE_VENDA/ (COUNT(*) OVER(PARTITION BY PK_VENDA)) AS FRETE_RATEADO
         , CASE
             WHEN VALOR_DESCONTO_UNIT_VENDA>0 THEN TRUE
@@ -55,7 +56,8 @@ with
             , FK_PRODUTO
             , FK_CUSTOMER
             , FK_CARTAO
-            , FK_CONVERSAO 
+            , FK_CONVERSAO
+            , FK_TERRITORIO 
             , DT_VENDA
             , DT_ENTREGA_PREVISTA
             , DT_ENVIO

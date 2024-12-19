@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_territorio_enriq
+    description: Tabela de dados intermediários para enriquecer os dados da dimensão território de venda.
+    columns:
+      - name: pk_territorio
+        description: .
+        data_tests:
+          - not_null

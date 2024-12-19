@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_adventure__endereco_cidade
+    description: Tabela de preparação dos dados de enderço.
+    columns:
+      - name: pk_endereco
+        description: Chave primária da tabela.
+
+      - name: ENDERECO_1
+        description: Linha 1 do endereço.
+
+      - name: ENDERECO_2
+        description: Linha 2 do endereço.
+
+      - name: cidade
+        description: Nome da cidade.
+
+      - name: fk_estado
+        description: Chave estrangeira para junção com informação de estado.

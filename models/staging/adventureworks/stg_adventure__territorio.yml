@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_adventure__territorio
+    description: Tabela de preparação dos dados de territorio de vendas.
+    columns:
+      - name: pk_territorio
+        description: Chave primária da tabela.
+        
+      - name: fk_pais
+        description: Chave estrangeira para junção com informação de país.
+      
+      - name: nm_territorio
+        description: Nome do território.

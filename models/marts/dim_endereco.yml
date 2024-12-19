@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_endereco
+    description: >
+      Tabela dimensão dos enderecos de pessoas envolvidas com a adventure Works
+    columns:
+      - name: PK_ENDERECO
+        description: Chave primária da dimensão de endereços.
+        tests:
+          - unique
+          - not_null
+
+      - name: FK_ESTADO
+        description: Chave da tabela estado.
+
+      - name: PK_ENTIDADE
+        description: Chave da tabela entidade endereco.
+              
+      - name: PK_TIPO_ENDERECO
+        description: Chave da tabela de tipo de endereço
+      
+      - name: ENDERECO_1
+        description: Linha 1 do endereco
+
+      - name: ENDERECO_2
+        description: Linha 2 do endereco
+        
+      - name: CIDADE
+        description: Nome da cidade do endereço.
+
+      - name: NM_ESTADO
+        description: Nome da estado do endereço.
+
+      - name: NM_PAIS
+        description: Nome da pais do endereço.
+
+      - name: TIPO_ENDERECO
+        description: Tipo de endereco da pessoa.

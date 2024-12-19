@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_adventure__cliente
+    description: Tabela de preparação dos dados de pessoa.
+    columns:
+      - name: pk_cliente
+        description: Chave primária da tabela.
+        
+      - name: fk_entidade
+        description: Chave estrangeira para junção com entidade
