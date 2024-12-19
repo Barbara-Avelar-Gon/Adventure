@@ -37,6 +37,3 @@ models:
 
       - name: TIPO_ENDERECO
         description: Tipo de endereco da pessoa.
-
-      - name: NM_PRODUTO_MOD
-        description: Nome do modelo do produto.

@@ -18,8 +18,21 @@ with
         select *
         from {{ ref('dim_cartao') }}
     )
--- cliente
--- ENDERECO COM TERRITÓRIO
+
+    , dim_endereco as (
+        select *
+        from {{ ref('dim_endereco') }}
+    )
+
+    , dim_territorio_venda as (
+        select *
+        from {{ ref('dim_territorio_venda') }}
+    )
+
+    , dim_cliente as (
+        select *
+        from {{ ref('dim_cliente') }}
+    )
     
 
 select *

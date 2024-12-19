@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_territorio_venda
+    description: >
+      Tabela dimensão dos territórios associados as vendas da Adventure Works
+    columns:
+      - name: pk_territorio
+        description: Chave primária da dimensão de razoes.
+
+      - name: fk_pais
+        description: Chave da tabela pais.
+              
+      - name: nm_territorio
+        description: Nome do territorio.
