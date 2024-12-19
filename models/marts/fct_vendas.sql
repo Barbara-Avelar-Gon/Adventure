@@ -19,6 +19,7 @@ with
         from {{ ref('dim_cartao') }}
     )
 -- cliente
+-- ENDERECO COM TERRITÓRIO
     
 
 select *
