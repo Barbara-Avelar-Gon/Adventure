@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_adventure__pessoa
+    description: Tabela de preparação dos dados de pessoa.
+    columns:
+      - name: pk_entidade
+        description: Chave primária da tabela.
+        
+      - name: tipo_pessoa
+        description: Tipo de pessoa.
+
+      - name: titulo_pessoa
+        description: Forma de tratamento da pessoa.
+        
+      - name: nome_pessoa
+        description: Nome completo da pessoa.
