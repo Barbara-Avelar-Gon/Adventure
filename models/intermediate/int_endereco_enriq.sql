@@ -30,12 +30,12 @@ with
         cidade.PK_ENDERECO
         , cidade.FK_ESTADO
         , endereco_entidade.PK_ENTIDADE
-        , endereco_entidade.FK_ENDERECO
+        --, endereco_entidade.FK_ENDERECO
         , endereco_entidade.PK_TIPO_ENDERECO
-        , estado.PK_ESTADO
-        , estado.FK_PAIS
-        , pais.PK_PAIS
-        , tipo_endereco.PK_TIPO_ENDERECO
+        --, estado.PK_ESTADO
+        --, estado.FK_PAIS
+        --, pais.PK_PAIS
+        --, tipo_endereco.PK_TIPO_ENDERECO
         , cidade.ENDERECO_1
         , cidade.ENDERECO_2
         , cidade.CIDADE
