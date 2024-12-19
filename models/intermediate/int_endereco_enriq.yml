@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_endereco_enriq
+    description: Tabela de intermediária para enriquecer os dados da dimensão endereco.
+    columns:
+      - name: PK_ENDERECO
+        description: .
+        data_tests:
+          - unique
+          - not_null
