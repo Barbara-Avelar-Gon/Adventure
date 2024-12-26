@@ -19,9 +19,11 @@ with
         , vendas.FK_CARTAO
         , vendas.FK_CONVERSAO
         , vendas.fk_territorio
+        , vendas.fk_endereco_envio
         , vendas.DT_VENDA
         , vendas.DT_ENTREGA_PREVISTA
         , vendas.DT_ENVIO
+        , TO_CHAR(vendas.DT_VENDA, 'MM/YYYY') AS COMPETENCIA_VENDA
         , vendas.STATUS_VENDA
         , vendas_detalhes.COD_PROMO_VENDA
         , vendas.SUBTOTAL_VENDA
@@ -58,9 +60,11 @@ with
             , FK_CARTAO
             , FK_CONVERSAO
             , FK_TERRITORIO 
+            , fk_endereco_envio
             , DT_VENDA
             , DT_ENTREGA_PREVISTA
             , DT_ENVIO
+            , COMPETENCIA_VENDA
             , SUBTOTAL_VENDA
             , TAXA_VENDA
             , QTD_VENDA

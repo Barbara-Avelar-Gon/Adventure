@@ -18,6 +18,7 @@ with
             , cast (CREDITCARDID as int) as fk_cartao
             , cast (CURRENCYRATEID as int) as fk_conversao
             , cast (TerritoryID as int) as fk_territorio
+            , cast (SHIPTOADDRESSID as int) as fk_endereco_envio
             , cast (SUBTOTAL as NUMBER(38,6)) as subtotal_venda
             , cast (TAXAMT as NUMBER(38,6)) as taxa_venda
             , cast (FREIGHT as NUMBER(38,6)) as frete_venda

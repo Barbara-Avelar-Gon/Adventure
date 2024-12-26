@@ -4,7 +4,7 @@ with
         from {{ ref('int_vendas_metric') }}
     )
 
-, dim_produto as (
+    , dim_produto as (
         select *
         from {{ ref('dim_produto') }}
     )
@@ -37,3 +37,6 @@ with
 
 select *
 from int_vendas
+    left join dim_cliente on int_vendas.FK_CUSTOMER = dim_cliente.pk_cliente
+    left join dim_razao on int_vendas.PK_VENDA = dim_razao.PK_RAZAO_VENDA
+    left join dim_endereco on int_vendas.fk_endereco_envio = dim_endereco.PK_ENDERECO
