@@ -1,0 +1,154 @@
+version: 2
+
+models:
+  - name: fct_vendas
+    description: >
+      Tabela fato de vendas da Adventure Works
+    columns:
+      - name: PK_VENDA_DETALHE
+        description: Chave primária de pedidos detalhadas.
+        tests:
+          - unique
+          - not_null
+
+      - name: PK_VENDA
+        description: Chave primária de pedidos realizados na Adventure Works.
+        tests:
+          - not_null
+
+      - name: FK_PRODUTO
+        description: Chave estrangeira para junção com tabela de produtos.
+        tests:
+          - not_null
+              
+      - name: FK_CUSTOMER
+        description: Chave estrangeira para junção com tabela de clientes.
+        tests:
+          - not_null
+      
+      - name: FK_CARTAO
+        description: Chave estrangeira para junção com tabela de cartão usado nas compras.
+        
+      - name: FK_CONVERSAO
+        description: Chave estrangeira para junção com tabela de conversão usado nas compras.
+
+      - name: FK_TERRITORIO
+        description: Chave estrangeira para junção com tabela de território.
+        tests:
+          - not_null
+
+      - name: FK_ENDERECO_ENVIO
+        description: Chave estrangeira para junção com tabela de endereço.
+        tests:
+          - not_null
+      
+      - name: DT_VENDA
+        description: Data da realização da venda.
+        tests:
+          - not_null
+      
+      - name: DT_ENTREGA_PREVISTA
+        description: Data de entrega prevista.
+        tests:
+          - not_null
+
+      - name: DT_ENVIO
+        description: Data de envio do produto.
+        tests:
+          - not_null
+
+      - name: COMPETENCIA_VENDA
+        description: Data de competência (mês/ano) baseado na data de venda.
+        tests:
+          - not_null
+
+      - name: SUBTOTAL_VENDA
+        description: Valor subtotal da venda.
+
+      - name: TAXA_VENDA
+        description: Valor das taxas da venda.
+      
+      - name: QTD_VENDA
+        description: Quantidade de produtos comprados.
+
+      - name: VALOR_TOTAL_VENDA
+        description: Valor total por compra. Soma do Subtotal, Taxa, Frete.
+
+      - name: VALOR_UNITARIO_VENDA
+        description: Valor de cada produto unitariamente.
+
+      - name: VALOR_DESCONTO_UNIT_VENDA
+        description: Valor de desconto aplicado a unidade de compra.
+
+      - name: VALOR_BRUTO
+        description: Valor calculado baseado na multiplicação da quantidade de venda pelo valor unitário de vendas
+    
+      - name: VALOR_LIQ
+        description: Valor calculado baseado na multiplicação da quantidade de venda pelo valor unitário de vendas reduzindo o percentual de desconto.
+
+      - name: FRETE_RATEADO
+        description: Valor calculado baseado na divisão do frete de venda pela quantidade de itens de cada compra.
+    
+      - name: DESCONTO
+        description: Valor calculado baseado no valor de desconto maior que 0.
+
+      - name: STATUS_VENDA
+        description: Status atual da compra.
+
+      - name: COD_PROMO_VENDA
+        description: Código promocional da compra.
+
+      - name: PK_CLIENTE
+        description: Chave primária da dimensão de cliente.
+        tests:
+          - not_null
+
+      - name: FK_ENTIDADE
+        description: Chave estrangeira para união com dados da pessoa.
+
+      - name: TIPO_PESSOA
+        description: Tipo de pessoa (consumidor, vendedor, entre outros).
+
+      - name: TITULO_PESSOA
+        description: Forma de tratamento da pessoa.
+
+      - name: NOME_PESSOA
+        description: Nome da pessoa formado por primeiro e ultimo nome.
+
+      - name: PK_RAZAO_VENDA
+        description: Chave primária da dimensão de razoes.
+
+      - name: RAZAO_AGREG
+        description: Nome da razão agregada - cada linha da chave primária pode possuir mais de uma razão.
+
+      - name: PK_ENDERECO
+        description: Chave primária da dimensão de endereços.
+        tests:
+          - not_null
+
+      - name: FK_ESTADO
+        description: Chave da tabela estado.
+
+      - name: PK_ENTIDADE
+        description: Chave da tabela entidade endereco.
+              
+      - name: PK_TIPO_ENDERECO
+        description: Chave da tabela de tipo de endereço
+      
+      - name: ENDERECO_1
+        description: Linha 1 do endereco
+
+      - name: ENDERECO_2
+        description: Linha 2 do endereco
+        
+      - name: CIDADE
+        description: Nome da cidade do endereço.
+
+      - name: NM_ESTADO
+        description: Nome da estado do endereço.
+
+      - name: NM_PAIS
+        description: Nome da pais do endereço.
+
+      - name: TIPO_ENDERECO
+        description: Tipo de endereco da pessoa.

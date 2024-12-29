@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: int_razao_enriq
-    description: Tabela de intermediário para enriquecer os dados da dimensão razao de venda.
+    description: Tabela intermediária para enriquecer os dados da dimensão razao de venda.
     columns:
       - name: PK_RAZAO_VENDA
         description: .
