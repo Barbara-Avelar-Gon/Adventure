@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_produtos
+  - name: dim_produto
     description: >
       Tabela dimensão dos produtos da adventure Works
     columns:

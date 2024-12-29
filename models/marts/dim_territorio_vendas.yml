@@ -7,9 +7,12 @@ models:
     columns:
       - name: pk_territorio
         description: Chave primária da dimensão de razoes.
-
-      - name: fk_pais
-        description: Chave da tabela pais.
+        tests:
+          - unique
+          - not_null
               
       - name: nm_territorio
         description: Nome do territorio.
+
+      - name: NM_PAIS
+        description: Nome do país.

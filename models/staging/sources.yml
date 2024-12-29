@@ -14,36 +14,197 @@ sources:
               - not_null
               
       - name: PRODUCT
+        description: 'Tabela com dados de produtos ofertados pela Adventure Works.'
+        columns:
+          - name: ProductID
+            description: 'Chave primária da tabela de produtos.'
+            tests:
+              - unique
+              - not_null
 
       - name: ProductSubcategory
+        description: 'Tabela com dados da subcategoria de produtos ofertados pela Adventure Works.'
+        columns:
+          - name: ProductSubcategoryID
+            description: 'Chave primária da tabela da subcategoria de produtos.'
+            tests:
+              - unique
+              - not_null
 
       - name: ProductCategory
+        description: 'Tabela com dados da categoria de produtos ofertados pela Adventure Works.'
+        columns:
+          - name: ProductCategoryID
+            description: 'Chave primária da tabela da categoria de produtos.'
+            tests:
+              - unique
+              - not_null
 
       - name: ProductModel
+        description: 'Tabela com dados do modelo de produtos ofertados pela Adventure Works.'
+        columns:
+          - name: ProductModelID
+            description: 'Chave primária da tabela do modelo de produtos.'
+            tests:
+              - unique
+              - not_null
 
       - name: SalesOrderHeaderSalesReason
+        description: 'Tabela com dados da razão de compras dos pedidos na Adventure Works.'
+        columns:
+          - name: SalesOrderID
+            description: 'Chave primária para junção com a tabela de pedidos de compra na Adventure Works.'
+            tests:
+              - not_null
+          - name: SalesReasonID
+            description: 'Chave primária para junção com tabela de razão de compra na Adventure Works.'
+            tests:
+              - not_null
 
       - name: SalesReason
+        description: 'Tabela com dados da razão de compra pela Adventure Works.'
+        columns:
+          - name: SalesReasonID
+            description: 'Chave primária da tabela de razão de compra na Adventure Works.'
+            tests:
+              - unique
+              - not_null
 
       - name: CreditCard
+        description: 'Tabela com dados dos cartões de créditos usados nas compras na Adventure Works.'
+        columns:
+          - name: CreditCardID
+            description: 'Chave primária da tabela de cartão de crédito.'
+            tests:
+              - unique
+              - not_null
 
       - name: SalesOrderHeader
+        description: 'Tabela com dados de pedidos realizados na Adventure Works.'
+        columns:
+          - name: SalesOrderID
+            description: 'Chave primária de pedidos realizados na Adventure Works.'
+            tests:
+              - not_null
+              - unique
+          - name: CreditCardID
+            description: 'Chave estrangeira para junção com tabela de cartão usado nas compras.'
+          - name: CustomerID
+            description: 'Chave estrangeira para junção com tabela de clientes.'
+            tests:
+              - not_null
+          - name: TerritoryID
+            description: 'Chave estrangeira para junção com tabela de território.'
+            tests:
+              - not_null
+          - name: ShipToAddressID
+            description: 'Chave estrangeira para junção com tabela de endereço.'
+            tests:
+              - not_null
        
       - name: SalesOrderDetail
+        description: 'Tabela com dados de detalhes das compras realizadas na Adventure Works.'
+        columns:
+          - name: SalesOrderID
+            description: 'Chave estrangeira de pedidos.'
+            tests:
+              - not_null
+          - name: SalesOrderDetailID
+            description: 'Chave primária de pedidos detalhadas.'
+            tests:
+              - not_null
+              - unique
+          - name: ProductID
+            description: 'Chave estrangeira para junção com tabela de produtos.'
+            tests:
+              - not_null
 
       - name: Person
+        description: 'Tabela com dados de informação de pessoas envolvidas com a Adventure Works.'
+        columns:
+          - name: BusinessEntityID
+            description: 'Chave primária de pessoas.'
+            tests:
+              - not_null
+              - unique
 
       - name: Customer
+        description: 'Tabela com dados de informação de clientes da Adventure Works.'
+        columns:
+          - name: CustomerID
+            description: 'Chave primária de clientes.'
+            tests:
+              - not_null
+              - unique
+          - name: PersonID
+            description: 'Chave estrangeira para junção com tabela de pessoas.'
+            tests:
+              - unique
 
       - name: BusinessEntity
+        description: 'Tabela com dados de para junção de endereço com informação de clientes.'
+        columns:
+          - name: BusinessEntityID
+            description: 'Chave primária de entidade de negócio.'
+            tests:
+              - not_null
+              - unique
 
       - name: BusinessEntityAddress
+        description: 'Tabela com dados para junção de endereço com informação de clientes.'
+        columns:
+          - name: BusinessEntityID
+            description: 'Chave primária de entidade de negócio.'
+            tests:
+              - not_null
+          - name: AddressID
+            description: 'Chave estrangeira para junção com tabela de endereços.'
+            tests:
+              - not_null
+          - name: AddressTypeID
+            description: 'Chave estrangeira para junção com tabela de tipo de endereços.'
+            tests:
+              - not_null
 
       - name: StateProvince
+        description: 'Tabela com dados de estados/províncias dos endereços.'
+        columns:
+          - name: StateProvinceID
+            description: 'Chave primária de dados de estados/províncias dos endereços.'
+            tests:
+              - not_null
+              - unique
+          - name: CountryRegionCode
+            description: 'Chave estrangeira para junção com tabela de país e regiões dos endereços.'
+            tests:
+              - not_null
 
       - name: CountryRegion
+        description: 'Tabela com dados de país e região dos endereços.'
+        columns:
+          - name: CountryRegionCode
+            description: 'Chave primária de dados de país e região dos endereços.'
+            tests:
+              - not_null
 
       - name: AddressType 
+        description: 'Tabela com dados do tipo de endereço registrado na Adventure Works.'
+        columns:
+          - name: AddressTypeID
+            description: 'Chave primária da tabela de tipos de endereços.'
+            tests:
+              - unique
+              - not_null
 
       - name: SalesTerritory
-
+        description: 'Tabela com dados do território das compras na Adventure Works.'
+        columns:
+          - name: TerritoryID
+            description: 'Chave primária da tabela de território de vendas.'
+            tests:
+              - unique
+              - not_null
+          - name: CountryRegionCode
+            description: 'Chave estrangeira para junção com tabela de país dos endereços.'
+            tests:
+              - not_null
